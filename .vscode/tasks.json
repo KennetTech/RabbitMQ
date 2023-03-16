@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Exercise Files/Ch_02/02_01 Begin/WebApp/ExploreCalifornia.WebApp/ExploreCalifornia.WebApp.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/Exercise Files/Ch_02/02_01 Begin/WebApp/ExploreCalifornia.WebApp/ExploreCalifornia.WebApp.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/Exercise Files/Ch_02/02_01 Begin/WebApp/ExploreCalifornia.WebApp/ExploreCalifornia.WebApp.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
