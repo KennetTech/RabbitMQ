@@ -1,5 +1,8 @@
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
+
+import java.nio.charset.StandardCharsets;
+
 import com.rabbitmq.client.Channel;
 
 public class Send {
@@ -11,7 +14,7 @@ public class Send {
              Channel channel = connection.createChannel()) {
                 channel.queueDeclare(QUEUE_NAME, false, false, false, null);
                 String message = "hello world";
-                channel.basicPublish("", message, null, message.getBytes());
+                channel.basicPublish("", QUEUE_NAME, null, message.getBytes(StandardCharsets.UTF_8));
                 System.out.println(" [x] Sent '" + message + "'");
         }
     }
